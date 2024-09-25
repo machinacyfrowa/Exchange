@@ -45,6 +45,7 @@
             TUSD = new RadioButton();
             groupBox3 = new GroupBox();
             ResultLabel = new Label();
+            button2 = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)amountNumeric).BeginInit();
             groupBox2.SuspendLayout();
@@ -130,7 +131,7 @@
             // 
             button1.Location = new Point(268, 9);
             button1.Name = "button1";
-            button1.Size = new Size(322, 203);
+            button1.Size = new Size(322, 144);
             button1.TabIndex = 5;
             button1.Text = "Przelicz";
             button1.UseVisualStyleBackColor = true;
@@ -229,11 +230,22 @@
             ResultLabel.TabIndex = 0;
             ResultLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // button2
+            // 
+            button2.Location = new Point(268, 159);
+            button2.Name = "button2";
+            button2.Size = new Size(322, 53);
+            button2.TabIndex = 9;
+            button2.Text = "Załaduj kursy z API";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += APIButtonClicked;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(838, 220);
+            Controls.Add(button2);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(amountNumeric);
@@ -270,5 +282,6 @@
         private RadioButton TPLN;
         private GroupBox groupBox3;
         private Label ResultLabel;
+        private Button button2;
     }
 }
